@@ -1,19 +1,46 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "./index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "TZ=AEST jest"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|@codler/*|native-base|@sentry/.*)"
+    ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "^5.8.8",
+    "@react-navigation/stack": "^5.12.5",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@testing-library/react-native": "^7.1.0",
+    "@types/jest": "^26.0.15",
+    "@types/styled-components": "^5.1.4",
+    "@types/styled-theming": "^2.2.5",
+    "dayjs": "^1.9.6",
     "expo": "~39.0.2",
+    "expo-location": "~9.0.0",
     "expo-status-bar": "~1.0.2",
+    "jest-expo": "^39.0.0",
+    "native-base": "^2.13.14",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-gesture-handler": "~1.7.0",
+    "react-native-reanimated": "~1.13.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "~2.10.1",
+    "react-native-web": "~0.13.12",
+    "react-query": "^2.26.2",
+    "styled-components": "^5.2.1",
+    "styled-theming": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
