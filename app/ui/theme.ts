@@ -6,6 +6,6 @@ export const primary = theme("theme", {
 });
 
 export const textPrimary = theme("theme", {
-  light: "#eee",
-  dark: "#1a1a1a",
+  light: "#333",
+  dark: "#d1d1d1",
 });

@@ -1,0 +1,3 @@
+type AppNav = {
+  home: undefined;
+};

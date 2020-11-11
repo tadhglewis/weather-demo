@@ -3,14 +3,18 @@ import * as Location from "expo-location";
 import { Alert } from "react-native";
 
 export default () => {
-  const [location, setLocation] = useState<{
-    longitude: number | undefined;
-    latitude: number | undefined;
-  }>({ longitude: undefined, latitude: undefined });
+  const [location, setLocation] = useState<
+    | {
+        longitude: number;
+        latitude: number;
+      }
+    | undefined
+  >(undefined);
 
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestPermissionsAsync();
+
       if (status !== "granted") {
         Alert.alert("Permission to access location was denied");
       }

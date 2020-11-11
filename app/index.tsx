@@ -1,13 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import home from "./home";
 import useApp from "./useApp";
 import UserContext from "./context/UserContext";
+import { Root } from "native-base";
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator<AppNav>();
 
 export default () => {
   const { location } = useApp();
@@ -15,10 +15,16 @@ export default () => {
   return (
     <NavigationContainer>
       <UserContext.Provider value={location}>
-        <ThemeProvider theme={{ theme: "dark" }}>
-          <Navigator initialRouteName="home">
-            <Screen name="home" component={home} options={{ title: "Home" }} />
-          </Navigator>
+        <ThemeProvider theme={{ theme: "light" }}>
+          <Root>
+            <Navigator initialRouteName="home">
+              <Screen
+                name="home"
+                component={home}
+                options={{ title: "Home" }}
+              />
+            </Navigator>
+          </Root>
         </ThemeProvider>
       </UserContext.Provider>
     </NavigationContainer>
