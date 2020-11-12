@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon should render icon 1`] = `
+<
+  icon={
+    Array [
+      "fas",
+      "cloud",
+    ]
+  }
+  size={16}
+/>
+`;
+
+exports[`icon should render styled icon 1`] = `
+<
+  icon={
+    Array [
+      "fas",
+      "font-awesome",
+    ]
+  }
+  size={32}
+  style={
+    Object {
+      "backgroundColor": "red",
+    }
+  }
+/>
+`;

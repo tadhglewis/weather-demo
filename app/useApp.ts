@@ -3,6 +3,7 @@ import * as Location from "expo-location";
 import { Alert } from "react-native";
 
 export default () => {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [location, setLocation] = useState<
     | {
         longitude: number;
@@ -24,5 +25,5 @@ export default () => {
     })();
   }, []);
 
-  return { location };
+  return { location, theme, setTheme };
 };

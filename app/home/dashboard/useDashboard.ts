@@ -1,20 +1,33 @@
-import { useContext } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 import { useQuery } from "react-query";
 import config from "../../../config";
-import UserContext from "../../context/UserContext";
+import useUser from "../../hooks/useUser";
 import Weather from "../Weather";
 
-export default () => {
-  const user = useContext(UserContext);
+export default ({ location }: { location?: string }) => {
+  const { setOptions } = useNavigation<StackNavigationProp<AppNav>>();
+  const user = useUser();
+  const queryLocation = location
+    ? location
+    : `${user?.latitude},${user?.longitude}`;
 
   const { isLoading, error, data, refetch } = useQuery<Weather>(
     "currentLocationData",
     () =>
       fetch(
-        `http://api.weatherstack.com/current?access_key=${config.apiKey}&units=m&query=${user?.latitude},${user?.longitude}`
+        `http://api.weatherstack.com/current?access_key=${config.apiKey}&units=m&query=${queryLocation}`
       ).then((res) => res.json()),
-    {}
+    {
+      onSuccess: (data) => {
+        setOptions({ title: data.location.name });
+      },
+    }
   );
 
-  return { loading: isLoading, data: data, refetch };
+  return {
+    loading: isLoading,
+    data: data,
+    refetch,
+  };
 };

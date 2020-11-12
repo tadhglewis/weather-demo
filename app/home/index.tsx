@@ -1,26 +1,26 @@
-import React, { useContext, useEffect } from "react";
-import { Text } from "react-native";
+import React from "react";
 import styled from "styled-components/native";
-import { primary } from "../ui/theme";
-import UserContext from "../context/UserContext";
 import { StackScreenProps } from "@react-navigation/stack";
 import Dashboard from "./dashboard";
+import { background } from "../ui/theme";
+import useUser from "../hooks/useUser";
 
 const Box = styled.View`
-  background-color: ${primary};
+  flex: 1;
+  background-color: ${background};
+`;
+
+const Search = styled.View`
   flex: 1;
 `;
 
-export default ({ navigation }: StackScreenProps<AppNav, "home">) => {
-  const user = useContext(UserContext);
+export default ({ navigation, route }: StackScreenProps<AppNav, "home">) => {
+  const user = useUser();
 
   return (
     <Box>
-      {user ? (
-        <Dashboard />
-      ) : (
-        <Text>Permission to access location was denied</Text>
-      )}
+      {user ? <Dashboard location={route.params?.location} /> : null}
+      <Search></Search>
     </Box>
   );
 };

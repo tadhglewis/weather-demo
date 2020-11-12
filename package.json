@@ -11,19 +11,18 @@
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|@codler/*|native-base|@sentry/.*)"
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|styled-components|styled-components/native|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|@codler/*|native-base|@sentry/.*)"
     ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-native-fontawesome": "^0.2.6",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.8.8",
     "@react-navigation/stack": "^5.12.5",
-    "@testing-library/react-hooks": "^3.4.2",
-    "@testing-library/react-native": "^7.1.0",
-    "@types/jest": "^26.0.15",
-    "@types/styled-components": "^5.1.4",
-    "@types/styled-theming": "^2.2.5",
     "dayjs": "^1.9.6",
     "expo": "~39.0.2",
     "expo-location": "~9.0.0",
@@ -37,6 +36,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "~2.10.1",
+    "react-native-svg": "^12.1.0",
     "react-native-web": "~0.13.12",
     "react-query": "^2.26.2",
     "styled-components": "^5.2.1",
@@ -44,9 +44,15 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@testing-library/react-hooks": "^3.4.2",
+    "@testing-library/react-native": "^7.1.0",
+    "@types/jest": "^26.0.15",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "@types/styled-components": "^5.1.4",
+    "@types/styled-theming": "^2.2.5",
+    "jest-styled-components": "^7.0.3",
     "typescript": "~3.9.5"
   },
   "private": true

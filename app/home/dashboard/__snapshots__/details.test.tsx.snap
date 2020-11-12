@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`details should render details 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginTop": 32,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "space-between",
+          "width": "30%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "textTransform": "uppercase",
+          },
+        ]
+      }
+    >
+      test
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#e3e3e3",
+            "fontSize": 16,
+          },
+        ]
+      }
+    >
+      123
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "space-between",
+          "width": "30%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "textTransform": "uppercase",
+          },
+        ]
+      }
+    >
+      hello
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#e3e3e3",
+            "fontSize": 16,
+          },
+        ]
+      }
+    >
+      hi
+    </Text>
+  </View>
+</View>
+`;
