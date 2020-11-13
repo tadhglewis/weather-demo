@@ -11,11 +11,11 @@ import { Root } from "native-base";
 const { Navigator, Screen } = createStackNavigator<AppNav>();
 
 export default () => {
-  const { location, setTheme, theme } = useApp();
+  const { location, setTheme, theme, locate } = useApp();
 
   return (
     <NavigationContainer>
-      <AppContext.Provider value={{ setTheme, theme }}>
+      <AppContext.Provider value={{ setTheme, theme, locate }}>
         <UserContext.Provider value={location}>
           <ThemeProvider theme={{ theme }}>
             <Root>

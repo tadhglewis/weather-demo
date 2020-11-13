@@ -35,25 +35,22 @@ const Temperature = styled.Text`
 `;
 
 const Box = styled.View`
+  width: 100%;
   flex: 1;
   align-items: center;
   padding: 32px;
   background-color: ${primary};
   border-bottom-start-radius: 130px;
   border-bottom-end-radius: 130px;
-`;
-
-const LightsOut = styled(Icon)``;
-
-const LightsOutButton = styled.TouchableOpacity`
-  position: absolute;
-  bottom: 0;
-  padding: 32px;
+  shadow-color: ${primary};
+  shadow-offset: 0 1px;
+  shadow-opacity: 0.22;
+  shadow-radius: 2.22px;
+  elevation: 3;
 `;
 
 export default ({ location }: { location?: string }) => {
   const { data, loading } = useDashboard({ location });
-  const { theme, setTheme } = useApp();
 
   return (
     <Box>
@@ -90,21 +87,16 @@ export default ({ location }: { location?: string }) => {
           <Details
             items={[
               { label: "UV Index", value: data?.current.uv_index.toString() },
+              {
+                label: "Feels Like",
+                value: data?.current.feelslike.toString(),
+              },
             ]}
           />
         </>
       ) : (
         <ActivityIndicator size="large" color={`${textPrimary}`} />
       )}
-      <LightsOutButton
-        onPress={() => setTheme?.(theme === "light" ? "dark" : "light")}
-      >
-        <LightsOut
-          size={32}
-          icon={"lightbulb"}
-          type={theme === "light" ? "r" : "s"}
-        />
-      </LightsOutButton>
     </Box>
   );
 };

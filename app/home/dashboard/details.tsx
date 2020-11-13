@@ -3,25 +3,25 @@ import styled from "styled-components/native";
 import { textPrimary, textSecondary } from "../../ui/theme";
 
 const Box = styled.View`
-  margin-top: 32px;
+  margin-top: 16px;
 `;
 
 const Row = styled.View`
-  width: 30%;
-  flex: 1;
   flex-direction: row;
   justify-content: space-between;
 `;
 
 const Label = styled.Text`
   color: ${textPrimary};
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
+  font-weight: 700;
 `;
 
 const Value = styled.Text`
   color: ${textSecondary};
-  font-size: 16px;
+  font-size: 12px;
+  margin-left: 32px;
 `;
 
 export default ({

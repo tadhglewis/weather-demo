@@ -1,3 +1,3 @@
 type AppNav = {
-  home: { location: string } | undefined;
+  home: { location?: string } | undefined;
 };

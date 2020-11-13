@@ -5,6 +5,11 @@ export const primary = theme("theme", {
   dark: "#354d71",
 });
 
+export const secondary = theme("theme", {
+  light: "#1e1e1e",
+  dark: "white",
+});
+
 export const background = theme("theme", {
   light: "white",
   dark: "#1e1e1e",
@@ -16,6 +21,6 @@ export const textPrimary = theme("theme", {
 });
 
 export const textSecondary = theme("theme", {
-  light: "#e3e3e3",
-  dark: "#e3e3e3",
+  light: "#fafafa",
+  dark: "#fafafa",
 });

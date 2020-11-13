@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import "jest-styled-components";
 import theme from "styled-theming";
 
-// mocking and always return light theme due to a bug where ThemeProvider isn't passing in the theme to styled-theming when Testing
+// mocking and always return light theme due to a bug where ThemeProvider isn't passing in the theme to styled-theming in tests
 jest.mock("styled-theming", () => (name: string, values: theme.ThemeMap) =>
   values.light
 );

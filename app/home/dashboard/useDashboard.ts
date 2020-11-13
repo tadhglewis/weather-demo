@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
+import { useEffect } from "react";
 import { useQuery } from "react-query";
 import config from "../../../config";
 import useUser from "../../hooks/useUser";
@@ -24,6 +25,10 @@ export default ({ location }: { location?: string }) => {
       },
     }
   );
+
+  useEffect(() => {
+    refetch();
+  }, [location]);
 
   return {
     loading: isLoading,

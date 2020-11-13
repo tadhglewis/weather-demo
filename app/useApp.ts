@@ -12,18 +12,20 @@ export default () => {
     | undefined
   >(undefined);
 
+  const locate = async () => {
+    let { status } = await Location.requestPermissionsAsync();
+
+    if (status !== "granted") {
+      Alert.alert("Permission to access location was denied");
+    }
+
+    let { coords } = await Location.getCurrentPositionAsync({});
+    setLocation({ longitude: coords.longitude, latitude: coords.latitude });
+  };
+
   useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestPermissionsAsync();
-
-      if (status !== "granted") {
-        Alert.alert("Permission to access location was denied");
-      }
-
-      let { coords } = await Location.getCurrentPositionAsync({});
-      setLocation({ longitude: coords.longitude, latitude: coords.latitude });
-    })();
+    locate();
   }, []);
 
-  return { location, theme, setTheme };
+  return { location, theme, setTheme, locate };
 };

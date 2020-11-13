@@ -5,7 +5,7 @@ exports[`details should render details 1`] = `
   style={
     Array [
       Object {
-        "marginTop": 32,
+        "marginTop": 16,
       },
     ]
   }
@@ -14,12 +14,8 @@ exports[`details should render details 1`] = `
     style={
       Array [
         Object {
-          "flexBasis": 0,
           "flexDirection": "row",
-          "flexGrow": 1,
-          "flexShrink": 1,
           "justifyContent": "space-between",
-          "width": "30%",
         },
       ]
     }
@@ -29,7 +25,8 @@ exports[`details should render details 1`] = `
         Array [
           Object {
             "color": "white",
-            "fontSize": 16,
+            "fontSize": 12,
+            "fontWeight": "700",
             "textTransform": "uppercase",
           },
         ]
@@ -41,8 +38,9 @@ exports[`details should render details 1`] = `
       style={
         Array [
           Object {
-            "color": "#e3e3e3",
-            "fontSize": 16,
+            "color": "#fafafa",
+            "fontSize": 12,
+            "marginLeft": 32,
           },
         ]
       }
@@ -54,12 +52,8 @@ exports[`details should render details 1`] = `
     style={
       Array [
         Object {
-          "flexBasis": 0,
           "flexDirection": "row",
-          "flexGrow": 1,
-          "flexShrink": 1,
           "justifyContent": "space-between",
-          "width": "30%",
         },
       ]
     }
@@ -69,7 +63,8 @@ exports[`details should render details 1`] = `
         Array [
           Object {
             "color": "white",
-            "fontSize": 16,
+            "fontSize": 12,
+            "fontWeight": "700",
             "textTransform": "uppercase",
           },
         ]
@@ -81,8 +76,9 @@ exports[`details should render details 1`] = `
       style={
         Array [
           Object {
-            "color": "#e3e3e3",
-            "fontSize": 16,
+            "color": "#fafafa",
+            "fontSize": 12,
+            "marginLeft": 32,
           },
         ]
       }

@@ -1,6 +1,11 @@
 import Unit from "../Unit";
 
-type WeatherDescription = "Clear";
+type WeatherDescription =
+  | "Clear"
+  | "Overcast"
+  | "Show In Vicinity"
+  | "Partly cloudy"
+  | "Light Rain";
 
 type Direction = "N" | "E" | "S" | "W";
 

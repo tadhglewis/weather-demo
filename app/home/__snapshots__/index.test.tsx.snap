@@ -1,0 +1,443 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home should switch to dark theme 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+      Object {
+        "height": 1334,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "marginTop": 16,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          Melbourne
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          Brisbane
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          London
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "opacity": 1,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "position": "absolute",
+      }
+    }
+    testID="lightsOut"
+  >
+    <
+      icon={
+        Array [
+          "far",
+          "lightbulb",
+        ]
+      }
+      size={32}
+      style={
+        Array [
+          Object {
+            "color": "#1e1e1e",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`home should switch to dark theme 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+      Object {
+        "height": 1334,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "marginTop": 16,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          Melbourne
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          Brisbane
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#49b0cf",
+            "borderRadius": 16,
+            "elevation": 3,
+            "marginBottom": 0,
+            "marginLeft": 8,
+            "marginRight": 8,
+            "marginTop": 0,
+            "opacity": 1,
+            "paddingBottom": 8,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 8,
+            "shadowColor": "#49b0cf",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.22,
+            "shadowRadius": 2.22,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          London
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "opacity": 1,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "position": "absolute",
+      }
+    }
+    testID="lightsOut"
+  >
+    <
+      icon={
+        Array [
+          "far",
+          "lightbulb",
+        ]
+      }
+      size={32}
+      style={
+        Array [
+          Object {
+            "color": "#1e1e1e",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
