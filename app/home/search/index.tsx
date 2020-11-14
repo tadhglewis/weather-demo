@@ -1,19 +1,58 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React, { useState } from "react";
 import styled from "styled-components/native";
+import useApp from "../../hooks/useApp";
+import useTimeout from "../../hooks/useTimeout";
+import { primary, secondary, textPrimary } from "../../ui/theme";
 import Favorites from "./favorites";
+import ui from "../../ui";
+
+const { icon } = ui;
 
 const Box = styled.View`
   flex: 1;
 `;
 
-export default ({
-  setLocation,
-}: {
-  setLocation: Dispatch<SetStateAction<string | undefined>>;
-}) => {
+const Search = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
+const Input = styled.TextInput`
+  border: 3px solid ${primary};
+  border-radius: 16px;
+  margin: 16px 8px;
+  padding-left: 13px;
+  color: ${secondary};
+`;
+
+const SearchButton = styled.TouchableOpacity`
+  position: absolute;
+  right: 22px;
+`;
+
+const SearchIcon = styled(icon)`
+  color: ${primary};
+`;
+
+export default ({}: {}) => {
+  const [text, setText] = useState<string>("");
+  const { setLocation, locate } = useApp();
+
   return (
     <Box>
-      <Favorites setLocation={setLocation} />
+      <Search>
+        <Input
+          placeholder="Search..."
+          style={{ flex: 1 }}
+          value={text}
+          onChangeText={setText}
+          onBlur={() => (text ? setLocation?.(text) : locate?.())}
+        />
+        <SearchButton onPress={() => (text ? setLocation?.(text) : locate?.())}>
+          <SearchIcon icon="search" size={20} />
+        </SearchButton>
+      </Search>
+      <Favorites />
     </Box>
   );
 };

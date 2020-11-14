@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components/native";
 import { StackScreenProps } from "@react-navigation/stack";
 import Dashboard from "./dashboard";
 import { background, secondary } from "../ui/theme";
-import useUser from "../hooks/useUser";
 import ui from "../ui";
 import useApp from "../hooks/useApp";
-import { useWindowDimensions } from "react-native";
 import Search from "./search";
+import { View } from "native-base";
 
 const { icon } = ui;
 
-const Box = styled.View`
+const Box = styled.ScrollView`
   flex: 1;
   background-color: ${background};
-  align-items: center;
 `;
 
 const LightsOut = styled(icon)`
@@ -25,20 +23,41 @@ const LightsOutButton = styled.TouchableOpacity`
   position: absolute;
   bottom: 0;
   padding: 16px;
+  margin: auto;
+  align-self: center;
+`;
+
+const LocateButton = styled.TouchableOpacity`
+  padding: 13px;
+`;
+
+const Locate = styled(icon)`
+  color: black;
 `;
 
 export default ({ navigation, route }: StackScreenProps<AppNav, "home">) => {
-  const { height } = useWindowDimensions();
-  const [location, setLocation] = useState<string | undefined>(
-    route.params?.location
-  );
-  const user = useUser();
-  const { theme, setTheme } = useApp();
+  const { theme, setTheme, locate, location } = useApp();
+
+  navigation.setOptions({
+    headerRight: () => (
+      <LocateButton
+        onPress={() => {
+          locate?.();
+        }}
+      >
+        <Locate icon="map-marker" size={23} />
+      </LocateButton>
+    ),
+  });
 
   return (
-    <Box style={{ height }}>
-      {user ? <Dashboard location={location} /> : null}
-      <Search setLocation={setLocation} />
+    <>
+      <Box>
+        <View style={{ alignItems: "center" }}>
+          {location ? <Dashboard /> : null}
+          <Search />
+        </View>
+      </Box>
       <LightsOutButton
         testID="lightsOut"
         onPress={() => setTheme?.(theme === "light" ? "dark" : "light")}
@@ -49,6 +68,6 @@ export default ({ navigation, route }: StackScreenProps<AppNav, "home">) => {
           type={theme === "light" ? "r" : "s"}
         />
       </LightsOutButton>
-    </Box>
+    </>
   );
 };

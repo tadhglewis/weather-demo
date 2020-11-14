@@ -6,7 +6,7 @@ import useDashboard from "./useDashboard";
 import { Toast } from "native-base";
 import { WeatherCodeObjs } from "../../constants";
 import ui from "../../ui";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, Text } from "react-native";
 import Details from "./details";
 import useApp from "../../hooks/useApp";
 
@@ -49,11 +49,12 @@ const Box = styled.View`
   elevation: 3;
 `;
 
-export default ({ location }: { location?: string }) => {
-  const { data, loading } = useDashboard({ location });
+export default () => {
+  const { data, loading, error } = useDashboard();
 
   return (
     <Box>
+      {error ? <Text>{error as string}</Text> : null}
       {!loading ? (
         <>
           <Icon

@@ -7,6 +7,7 @@ import { StackScreenProps } from "@react-navigation/stack";
 import useApp from "../hooks/useApp";
 
 jest.mock("../hooks/useApp");
+jest.mock("./dashboard/useDashboard");
 
 jest.mock("@fortawesome/react-native-fontawesome", () => ({
   FontAwesomeIcon: "",
@@ -32,10 +33,9 @@ describe("home", () => {
 
     const { getByTestId } = render(
       <Home
-        {...({ route: { params: { location: undefined } } } as StackScreenProps<
-          AppNav,
-          "home"
-        >)}
+        {...({
+          navigation: { setOptions: () => undefined },
+        } as any)}
       />
     );
 

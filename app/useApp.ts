@@ -4,13 +4,7 @@ import { Alert } from "react-native";
 
 export default () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [location, setLocation] = useState<
-    | {
-        longitude: number;
-        latitude: number;
-      }
-    | undefined
-  >(undefined);
+  const [location, setLocation] = useState<string | undefined>(undefined);
 
   const locate = async () => {
     let { status } = await Location.requestPermissionsAsync();
@@ -20,12 +14,12 @@ export default () => {
     }
 
     let { coords } = await Location.getCurrentPositionAsync({});
-    setLocation({ longitude: coords.longitude, latitude: coords.latitude });
+    setLocation(`${coords.latitude},${coords.longitude}`);
   };
 
   useEffect(() => {
     locate();
   }, []);
 
-  return { location, theme, setTheme, locate };
+  return { location, theme, setTheme, locate, setLocation };
 };
