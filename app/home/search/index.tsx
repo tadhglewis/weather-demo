@@ -36,12 +36,13 @@ const SearchIcon = styled(icon)`
 
 export default ({}: {}) => {
   const [text, setText] = useState<string>("");
-  const { setLocation, locate } = useApp();
+  const { setLocation, locate, theme } = useApp();
 
   return (
     <Box>
       <Search>
         <Input
+          placeholderTextColor={theme === "light" ? "#1e1e1e" : "white"}
           placeholder="Search..."
           style={{ flex: 1 }}
           value={text}
