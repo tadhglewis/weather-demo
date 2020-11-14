@@ -3,11 +3,10 @@ import { fireEvent, render } from "@testing-library/react-native";
 import "jest-styled-components";
 import theme from "styled-theming";
 import Home from "./";
-import { StackScreenProps } from "@react-navigation/stack";
 import useApp from "../hooks/useApp";
 
 jest.mock("../hooks/useApp");
-jest.mock("./dashboard/useDashboard");
+jest.mock("./dashboard/useDashboard", () => {});
 
 jest.mock("@fortawesome/react-native-fontawesome", () => ({
   FontAwesomeIcon: "",
