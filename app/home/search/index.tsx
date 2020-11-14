@@ -47,9 +47,25 @@ export default ({}: {}) => {
           style={{ flex: 1 }}
           value={text}
           onChangeText={setText}
-          onBlur={() => (text ? setLocation?.(text) : locate?.())}
+          onBlur={
+            text
+              ? () => {
+                  setLocation?.(text);
+                  setText("");
+                }
+              : locate
+          }
         />
-        <SearchButton onPress={() => (text ? setLocation?.(text) : locate?.())}>
+        <SearchButton
+          onPress={
+            text
+              ? () => {
+                  setLocation?.(text);
+                  setText("");
+                }
+              : locate
+          }
+        >
           <SearchIcon icon="search" size={20} />
         </SearchButton>
       </Search>
